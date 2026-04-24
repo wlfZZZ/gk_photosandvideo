@@ -1,0 +1,44 @@
+[
+    {
+        "title": "Wedding Ceremony",
+        "category": "Weddings",
+        "images": [
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_600,h_750/v1776782315/marraige_sample_15_1_rcextw.jpg",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_600,h_750/v1776782311/marraige_sample_12_1_l4rzgb.jpg",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_600,h_750/v1776779703/bw_nmvlr8.png"
+        ]
+    },
+    {
+        "title": "Candid Couple",
+        "category": "Weddings",
+        "images": [
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_500,h_600/v1776779838/100_jka7wm.jpg",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_500,h_600/v1776779836/101_mnnojt.jpg",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_500,h_600/v1776779833/111_ts4wnk.png",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_500,h_600/v1776779827/58_r4scda.png",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_500,h_600/v1776779821/80_d7qq6o.jpg",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_500,h_600/v1776779745/baby_shower_28_vlkde7.png",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_500,h_600/v1776779747/always_even_from_afar_hnxhu3.png"
+        ]
+    },
+    {
+        "title": "Portrait Photography",
+        "category": "Portraits",
+        "images": [
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_500,h_600/v1776779812/ad-2_ytex6o.png",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_500,h_600/v1776779688/shilpa_dmrsit.png",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_500,h_600/v1776779819/ad-1_hnmza0.png"
+        ]
+    },
+    {
+        "title": "Candid Moments",
+        "category": "Events",
+        "images": [
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776779839/1_uubymo.jpg",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776779818/ad-11_nxns4t.png",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776779816/ad-13_ya8bq3.png",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776779817/ad-12_db3tup.png",
+            "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776779750/ad-6_hgw7uz.png"
+        ]
+    }
+]

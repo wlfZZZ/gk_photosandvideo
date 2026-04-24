@@ -1,0 +1,100 @@
+[
+    {
+        "name": "Gokul",
+        "role": "Owner | Photographer",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776774152/Gokul_-_owner_photographer_nzgzkg.png",
+        "bio": "Visionary founder and lead storyteller behind GK Photos & Video.",
+        "class": "gokul-img"
+    },
+    {
+        "name": "Likitha",
+        "role": "Owner | Creativity Lead",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772825/likitha_Owner_creativity_lead_yaebra.png",
+        "bio": "Guiding the creative vision with a passion for soulful storytelling.",
+        "class": "likitha-img"
+    },
+    {
+        "name": "Divakar",
+        "role": "Designer",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772830/Divakar_-_designer_vnhvkx.png",
+        "bio": "Crafting visual harmony and elegant design experiences.",
+        "class": "divakar-img"
+    },
+    {
+        "name": "Balu",
+        "role": "Drone Pilot",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776871896/Balu_-_drone_pilot.png_nhjlpy.png",
+        "bio": "Capturing grand perspectives from the sky with cinematic precision.",
+        "class": "balu-img"
+    },
+    {
+        "name": "Hariprasad",
+        "role": "Editor",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772822/Hariprasad_-editor_gnrses.png",
+        "bio": "Weaving frames into timeless narratives with meticulous detail.",
+        "class": "hariprasad-img"
+    },
+    {
+        "name": "Edward",
+        "role": "Videographer",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772821/Edward_-_videographer_zlcxty.png",
+        "bio": "Life in motion – capturing the essence of every celebration.",
+        "class": "edward-img"
+    },
+    {
+        "name": "Prajwal",
+        "role": "Videographer",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772826/Prajwal_-_videographer_ibg2du.png",
+        "bio": "Mastering light and shadow to tell cinematic stories.",
+        "class": "prajwal-img"
+    },
+    {
+        "name": "Iwin",
+        "role": "Photographer | Cinematographer",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772823/Iwin_-_photographer_cinematographer_hia5hl.png",
+        "bio": "Blending still and moving imagery into one grand artistic vision.",
+        "class": "iwin-img"
+    },
+    {
+        "name": "Rohan",
+        "role": "Videographer",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772822/Rohan_-_videographer_sn2pfw.png",
+        "bio": "Documenting authentic moments with a fresh cinematic edge.",
+        "class": "rohan-img"
+    },
+    {
+        "name": "Dharshan",
+        "role": "Cinematographer | Editor",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772821/Dharshan_-_cinematographer_editor_lfhqsb.png",
+        "bio": "Expertly blending technical skill with creative post-production.",
+        "class": "dharshan-img"
+    },
+    {
+        "name": "Sagar",
+        "role": "Videographer",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772827/Sagar_-_videographer_qiksqa.png",
+        "bio": "Behind the lens, finding the magic in every frame.",
+        "class": "sagar-img"
+    },
+    {
+        "name": "Chandu",
+        "role": "Videographer",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772820/Chandu_-_videographer_m1nj2m.png",
+        "bio": "Dedicated to capturing the high-energy vibe of every event.",
+        "class": "chandu-img"
+    },
+    {
+        "name": "Vinay",
+        "role": "Videographer",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776772824/Vinay_-_videographer_i2znxg.png",
+        "bio": "Your memories, transformed through a cinematic lens.",
+        "class": "vinay-img"
+    },
+    {
+        "name": "Jeevan",
+        "role": "Photographer, Drone Pilot",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776874472/Jeevan_pupx57.png",
+        "bio": "Expert eyes from the ground and the sky.",
+        "class": "jeevan-img"
+    }
+]

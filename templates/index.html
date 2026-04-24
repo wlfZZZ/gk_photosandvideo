@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.site_name }} | Photography Portfolio</title>
+    <meta name="description" content="Clean, modern photography portfolio homepage for GK Photos & Video.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@600;700;800&family=Manrope:wght@400;500;600;700&family=Playball&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="nav-overlay"></div>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="nav-logo" href="#home" aria-label="{{ page.site_name }}">
+                <img src="https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776875000/BG_transprentlogo_amd7aw.png" alt="GK Logo" width="280" height="60" style="object-fit: contain;">
+                <span class="logo-text">Photos &amp; Video</span>
+            </a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="site-nav" id="site-nav">
+                {% for item in page.navigation %}
+                <a href="#{{ item|lower }}">{{ item }}</a>
+                {% endfor %}
+                <a class="nav-mobile-cta" href="#contact">Get in Touch</a>
+            </nav>
+
+            <a class="button button-primary header-cta" href="#contact">Get in Touch</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section" id="home">
+            <div class="hero-media">
+                <img src="https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776875556/GKP_317_mdgywp.jpg" alt="Cinematic wedding photography" loading="eager" width="1920"
+                    height="1080">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content container">
+                <div class="hero-copy">
+                    <p class="section-kicker">Premium Photography Portfolio</p>
+                    <h1 class="hero-title">
+                        <span class="hero-title-top">Let’s Snap</span>
+                        <span class="hero-title-bottom">Your Memories</span>
+                    </h1>
+                    <p>{{ page.hero.subtext }}</p>
+                    <a class="button button-primary" href="#portfolio">{{ page.hero.button }}</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="trust-bar">
+            <div class="container trust-content">
+                <div class="trust-item">
+                    <span>Our customers say <strong>Excellent</strong></span>
+                </div>
+                <div class="trust-stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                </div>
+                <div class="trust-item">
+                    <span><strong>5</strong> out of 5 stars based on <strong>134</strong> reviews</span>
+                </div>
+                <div class="trustpilot-brand">
+                    <span class="tp-star">★</span>
+                    <span class="tp-text">Trustpilot</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="content-section portfolio-section" id="portfolio">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">Selected Work</p>
+                        <h2>Portfolio</h2>
+                    </div>
+                    <div class="portfolio-filters" role="tablist" aria-label="Portfolio categories">
+                        {% for category in page.portfolio_categories %}
+                        <button class="filter-chip{% if loop.first %} is-active{% endif %}" type="button"
+                            data-filter="{{ category }}" role="tab"
+                            aria-selected="{% if loop.first %}true{% else %}false{% endif %}">
+                            {{ category }}
+                        </button>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="portfolio-grid reveal-on-scroll" id="portfolio-grid">
+                    <!-- Dynamically populated from static/data/portfolio.json -->
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    {% for stat in page.stats %}
+                    <article class="stat-card reveal-on-scroll">
+                        <strong class="stat-number" data-target="{{ stat.value|replace('+', '') }}">{{ stat.value
+                            }}</strong>
+                        <span>{{ stat.label }}</span>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section media-showcase-section" id="cinematic-showcase">
+            <div class="container-full">
+                <!-- 1. HERO VIDEO -->
+                <div class="cinematic-hero reveal-on-scroll">
+                    <div class="video-wrapper">
+                        <video id="heroVideo" autoplay muted loop playsinline class="cinematic-video">
+                            <source
+                                src="https://res.cloudinary.com/dxmsz4akw/video/upload/q_auto/f_auto/v1776668611/gk_trailer_1_1_jw1byl.mp4"
+                                type="video/mp4">
+                        </video>
+                        <button id="soundToggle" class="sound-toggle-btn" aria-label="Toggle Sound">🔇</button>
+                        <div class="cinematic-overlay"></div>
+                    </div>
+                    <div class="cinematic-hero-content">
+                        <h2 class="cinematic-title">Let’s Snap Your Memories</h2>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <!-- 2. IMAGE STORY BLOCK -->
+                    <div class="image-story-block">
+                        <div class="story-image reveal-on-scroll">
+                            <img src="https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_800,h_1000/v1776782342/1a_1_oknjcd.png"
+                                alt="Cinematic Wedding Moment">
+                        </div>
+                        <div class="story-image reveal-on-scroll">
+                            <img src="https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_800,h_1000/v1776782331/11a_1_wqsood.png"
+                                alt="Couple in Love">
+                        </div>
+                    </div>
+
+                    <!-- 3. HIGHLIGHT IMAGE -->
+                    <div class="highlight-image-block reveal-on-scroll">
+                        <div class="highlight-image">
+                            <img src="https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto,f_auto,c_fill,g_auto,w_1200,h_800/v1776779837/1000028718_hcsc1a.jpg"
+                                alt="Grand Wedding Celebration">
+                        </div>
+                        <p class="highlight-caption">Every frame tells a story</p>
+                    </div>
+
+                    <!-- 4. SECONDARY VIDEO -->
+                    <div class="secondary-video-block reveal-on-scroll">
+                        <div class="secondary-video-frame">
+                            <video muted playsinline preload="metadata" poster="{{ page.visual_showcase.video.poster }}"
+                                class="secondary-video">
+                                <source src="{{ page.visual_showcase.video.src }}" type="video/mp4">
+                            </video>
+                            <div class="video-controls-overlay">
+                                <button class="play-button-cinematic" aria-label="Play Video">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 5. CTA -->
+                    <div class="cinematic-cta reveal-on-scroll">
+                        <a href="#portfolio" class="button button-primary">View Full Portfolio</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section pricing-section" id="pricing">
+            <div class="container">
+                <div class="section-heading">
+                    <div>
+                        <p class="section-kicker">Pricing</p>
+                        <h2>Our Packages</h2>
+                    </div>
+                </div>
+
+                <div class="pricing-toggle-wrap">
+                    <div class="pricing-toggle" role="tablist" aria-label="Package duration selector" data-active="0">
+                        <span class="pricing-toggle-glider" aria-hidden="true"></span>
+                        {% for group in page.packages %}
+                        <button class="pricing-toggle-button{% if loop.first %} is-active{% endif %}" type="button"
+                            role="tab" data-panel-target="{{ loop.index0 }}"
+                            aria-selected="{% if loop.first %}true{% else %}false{% endif %}">
+                            {{ group.duration }}
+                        </button>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="pricing-panels">
+                    {% for group in page.packages %}
+                    <div class="pricing-panel{% if loop.first %} is-active{% endif %}" data-panel="{{ loop.index0 }}">
+                        <div class="pricing-group-heading">
+                            <h3>{{ group.duration }}</h3>
+                        </div>
+
+                        <div class="pricing-grid">
+                            {% for item in group["items"] %}
+                            <article
+                                class="pricing-card pricing-reveal{% if item.name == 'Gold' %} is-featured{% endif %}">
+                                {% if item.name == 'Gold' %}
+                                <span class="pricing-badge">Most Popular</span>
+                                {% endif %}
+                                <div class="pricing-tier">
+                                    <span>{{ item.name }}</span>
+                                    <strong>{{ item.price }}</strong>
+                                </div>
+
+                                <ul class="pricing-features">
+                                    {% for feature in item.features %}
+                                    <li>{{ feature }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </article>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+
+                <p class="pricing-note">{{ page.packages_note }}</p>
+            </div>
+        </section>
+
+        <section class="content-section google-reviews-section" id="testimonials">
+            <div class="container">
+                <div class="google-reviews-header">
+                    <div class="gr-summary">
+                        <div class="gr-brand">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                                alt="Google" class="google-g-logo">
+                            <span>Reviews</span>
+                        </div>
+                        <div class="gr-stats">
+                            <span class="gr-rating">{{ page.google_reviews.average_rating }}</span>
+                            <div class="gr-stars-main">
+                                ★★★★★
+                            </div>
+                            <span class="gr-count">{{ page.google_reviews.total_count }} reviews</span>
+                        </div>
+                    </div>
+                    <a href="{{ page.google_reviews.maps_link }}" class="button button-outline gr-view-btn"
+                        target="_blank" rel="noopener">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                            alt="Google" class="btn-icon">
+                        View all reviews on Google
+                    </a>
+                </div>
+
+                <div class="google-reviews-grid reveal-on-scroll" id="testimonials-grid">
+                    <!-- Dynamically populated from static/data/testimonials.json -->
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section about-section" id="about">
+            <div class="container about-grid">
+                <div class="about-media">
+                    <img src="{{ page.about.image }}" alt="Founder portrait" loading="lazy">
+                </div>
+                <div class="about-copy">
+                    <p class="section-kicker">Our Story</p>
+                    <h2>{{ page.about.heading }}</h2>
+                    <h3>{{ page.about.subheading }}</h3>
+                    {% for paragraph in page.about.text %}
+                    <p>{{ paragraph }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section team-custom-section" id="team">
+            <div class="container">
+                <div class="section-heading-centered">
+                    <p class="section-kicker">Our Team</p>
+                    <h2 class="team-grid-title">Awesome team members</h2>
+                </div>
+
+                <div class="team-layout-wrapper reveal-on-scroll" id="team-wrapper">
+                    <!-- Dynamically populated from static/data/team.json -->
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section enquiry-section" id="contact">
+            <div class="container">
+                <div class="section-heading contact-heading">
+                    <div>
+                        <p class="section-kicker">Contact</p>
+                        <h2>{{ page.enquiry.heading }}</h2>
+                    </div>
+                </div>
+
+                <div class="contact-split-layout">
+                    <div class="message-column">
+                        <h3>{{ page.enquiry.form_heading }}</h3>
+
+                        <form class="message-form" action="#" method="post">
+                            <label class="line-field">
+                                <span>Name</span>
+                                <input type="text" name="name" placeholder="Your name">
+                            </label>
+
+                            <label class="line-field">
+                                <span>Email Address</span>
+                                <input type="email" name="email" placeholder="Your email address">
+                            </label>
+
+                            <label class="line-field line-field-full">
+                                <span>Phone Number</span>
+                                <input type="tel" name="phone" placeholder="Your phone number">
+                            </label>
+
+                            <label class="line-field line-field-full">
+                                <span>Message</span>
+                                <textarea name="message" rows="5" placeholder="Tell us about your event"></textarea>
+                            </label>
+
+                            <button class="button button-primary" type="submit">{{ page.enquiry.button }}</button>
+                            <div id="form-status" class="form-status"></div>
+                        </form>
+                    </div>
+
+                    <aside class="details-column">
+                        <div class="details-block">
+                            <h3>Call Us</h3>
+                            {% for phone in page.footer.phones %}
+                            <a href="tel:+91{{ phone }}">{{ phone }}</a>
+                            {% endfor %}
+                        </div>
+
+                        <div class="details-block">
+                            <h3>Visit Us</h3>
+                            {% for address in page.footer.addresses %}
+                            <div class="contact-address">
+                                <strong>{{ address.city }}</strong>
+                                {% for line in address.lines %}
+                                <p>{{ line }}</p>
+                                {% endfor %}
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="details-block">
+                            <h3>Branches</h3>
+                            <p>{{ page.footer.locations }}</p>
+                        </div>
+
+                        <div class="details-block">
+                            <h3>Since</h3>
+                            <p>{{ page.footer.since }}</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <section class="map-section">
+            <div class="container">
+                <div class="section-heading section-heading-center">
+                    <div>
+                        <p class="section-kicker">{{ page.maps.heading }}</p>
+                        <div class="map-location-tabs">
+                            {% for loc in page.maps.locations %}
+                            <button class="map-tab-btn{% if loop.first %} is-active{% endif %}" type="button"
+                                data-map-id="{{ loc.id }}">
+                                {{ loc.name }}
+                            </button>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="map-display-area">
+                    {% for loc in page.maps.locations %}
+                    <div class="map-container{% if loop.first %} is-visible{% endif %}" id="map-{{ loc.id }}">
+                        <div class="map-frame">
+                            <iframe src="{{ loc.embed_url }}" title="GK Photos & Video {{ loc.name }} map"
+                                loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="map-action">
+                            <a href="{{ loc.maps_url }}" target="_blank" class="button button-primary map-link-btn"
+                                rel="noopener">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                Open in Google Maps
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer footer">
+        <div class="container footer-grid">
+            <div class="footer-left">
+                <a class="footer-logo" href="#home" aria-label="{{ page.site_name }}">
+                    <img src="https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776875000/BG_transprentlogo_amd7aw.png"
+                        alt="{{ page.site_name }}" style="object-fit: contain;" loading="lazy" width="160" height="34">
+                </a>
+                <h3>{{ page.site_name }}</h3>
+                <p>{{ page.footer.tagline }}</p>
+                <span>{{ page.footer.since }}</span>
+            </div>
+
+            <div class="footer-column">
+                <h4>Contact</h4>
+                {% for phone in page.footer.phones %}
+                <a href="tel:+91{{ phone }}">{{ phone }}</a>
+                {% endfor %}
+                <p>{{ page.footer.locations }}</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Addresses</h4>
+                {% for address in page.footer.addresses %}
+                <div class="footer-address">
+                    <strong>{{ address.city }}</strong>
+                    {% for line in address.lines %}
+                    <p>{{ line }}</p>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+
+            <div class="footer-column">
+                <h4>Social</h4>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/gk_photos_and_video?igsh=MW1mcnE1Y2F2aDZvNg==" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="container footer-bottom">
+            <p>&copy; {{ current_year }} {{ page.site_name }}. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scroll-to-top" class="scroll-top-btn" aria-label="Scroll to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6" />
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("87NHr-Vs6k80YI4A6");
+        })();
+    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
