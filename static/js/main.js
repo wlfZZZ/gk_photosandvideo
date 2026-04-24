@@ -340,7 +340,7 @@ function initContactForm() {
                 }
                 const data = new FormData(contactForm);
                 const whatsappMessage = `Hey GK\n\nJust submitted the enquiry form from your website.\n\nName: ${data.get("name")}\nPhone: ${data.get("phone")}\n\nMessage:\n${data.get("message")}`;
-                const whatsappUrl = `https://wa.me/919740689946?text=${encodeURIComponent(whatsappMessage)}`;
+                const whatsappUrl = `https://wa.me/917829784837?text=${encodeURIComponent(whatsappMessage)}`;
                 contactForm.reset();
                 setTimeout(() => window.open(whatsappUrl, "_blank"), 1500);
             }, (err) => {
