@@ -409,6 +409,7 @@ PAGE_CONTENT = {
 }
 
 
+# Root route for the homepage
 @app.route("/")
 def home():
     return render_template(
