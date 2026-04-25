@@ -96,5 +96,10 @@
         "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1776874472/Jeevan_pupx57.png",
         "bio": "Expert eyes from the ground and the sky.",
         "class": "jeevan-img"
+    },
+    {
+        "name": "Afsal",
+        "role": "Photographer",
+        "image": "https://res.cloudinary.com/dxmsz4akw/image/upload/q_auto/f_auto/v1777129590/Afsal_-_photographer_lipsqn.png"
     }
 ]

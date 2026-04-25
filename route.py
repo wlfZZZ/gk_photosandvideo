@@ -5,6 +5,17 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+MAINTENANCE_MODE = False
+
+@app.before_request
+def check_for_maintenance():
+    if MAINTENANCE_MODE:
+        return render_template("maintenance.html"), 503
+
+@app.errorhandler(500)
+def server_error(e):
+    return render_template("maintenance.html"), 500
+
 
 PAGE_CONTENT = {
     "site_name": "GK Photos & Video",
